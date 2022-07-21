@@ -48,7 +48,7 @@ pipelines:
         type: NpmBuild
         configuration:
           repositoryName: dashboard-npm-virtual                                      # required, npm repository name on artifacctory
-          sourceLocation: ./      # required, location of package.json file
+          sourceLocation: ./client/      # required, location of package.json file
           integrations:
             - name:  Artifactory_MPATEL  # required
           inputResources:
