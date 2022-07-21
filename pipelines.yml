@@ -71,14 +71,6 @@ pipelines:
           outputResources:
             - name: react_build_info         # optional
 
-      - name: xrayScanStep
-        type: XrayScan
-        configuration:
-          inputResources:
-            - name: react_build_info
-          outputResources:
-            - name: react_build_info
-
   - name: react_app_qa
     steps:
       - name: promote_to_qa
