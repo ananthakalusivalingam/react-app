@@ -72,10 +72,10 @@ pipelines:
             - name: react_build_info         # optional
 
       - name: xrayScanStep
-          type: XrayScan
-          configuration:
-            inputResources:
-              - name: react_build_info
+        type: XrayScan
+        configuration:
+          inputResources:
+            - name: react_build_info
 
       - name: promote_to_qa
         type: PromoteBuild
