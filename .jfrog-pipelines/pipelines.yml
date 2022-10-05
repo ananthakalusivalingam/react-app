@@ -1,5 +1,5 @@
 resources:
-  - name: git_react_repo
+  - name: git_react_repo1
     type: GitRepo
     configuration:
       # SCM integration where the repository is located
@@ -13,7 +13,7 @@ resources:
         # Specifies which branches will trigger dependent steps
         include: main
 
-  - name: react_build_info
+  - name: react_build_info1
     type: BuildInfo
     configuration:
       sourceArtifactory: ananthaArtifactory
@@ -52,7 +52,7 @@ pipelines:
           integrations:
             - name:  ananthaArtifactory  # required
           inputResources:
-            - name: git_react_repo   # required
+            - name: git_react_repo1   # required
         execution:
           onSuccess:
             - cd $res_src_resourcePath
@@ -69,7 +69,7 @@ pipelines:
           inputSteps:
             - name: npm_build_step         # required
           outputResources:
-            - name: react_build_info         # optional
+            - name: react_build_info1         # optional
 
   - name: react_app_qa
     steps:
@@ -82,7 +82,7 @@ pipelines:
           comment: 'Promote to QA'
           copy: false
           inputResources:
-            - name: react_build_info
+            - name: react_build_info1
           outputResources:
             - name: promoted_react_to_qa_build_info1
 
