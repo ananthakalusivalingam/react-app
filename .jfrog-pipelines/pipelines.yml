@@ -16,7 +16,7 @@ resources:
   - name: react_build_info
     type: BuildInfo
     configuration:
-      sourceArtifactory: Artifactory_MPATEL
+      sourceArtifactory: ananthaArtifactory
       buildName:  'react-app'
       buildNumber: $run_number
       externalCI: Artifactory
