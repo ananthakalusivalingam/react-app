@@ -38,7 +38,7 @@ resources:
       externalCI: Artifactory
 
 pipelines:
-  - name: react_app_dev
+  - name: react_app_dev1
     configuration:
       environmentVariables:
         readOnly:
@@ -71,7 +71,7 @@ pipelines:
           outputResources:
             - name: react_build_info1         # optional
 
-  - name: react_app_qa
+  - name: react_app_qa1
     steps:
       - name: promote_to_qa
         type: PromoteBuild
@@ -86,7 +86,7 @@ pipelines:
           outputResources:
             - name: promoted_react_to_qa_build_info1
 
-  - name: react_app_prod
+  - name: react_app_prod1
     steps:
       - name: promote_to_prod
         type: PromoteBuild
