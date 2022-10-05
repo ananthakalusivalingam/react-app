@@ -21,7 +21,7 @@ resources:
       buildNumber: $run_number
       externalCI: Artifactory
 
-  - name: promoted_react_to_qa_build_info
+  - name: promoted_react_to_qa_build_info1
     type: BuildInfo
     configuration:
       sourceArtifactory: ananthaArtifactory
@@ -29,7 +29,7 @@ resources:
       buildNumber: $run_number
       externalCI: Artifactory
 
-  - name: promoted_react_to_prod_build_info
+  - name: promoted_react_to_prod_build_info1
     type: BuildInfo
     configuration:
       sourceArtifactory: ananthaArtifactory
@@ -84,7 +84,7 @@ pipelines:
           inputResources:
             - name: react_build_info
           outputResources:
-            - name: promoted_react_to_qa_build_info
+            - name: promoted_react_to_qa_build_info1
 
   - name: react_app_prod
     steps:
@@ -97,6 +97,6 @@ pipelines:
           comment: 'Promote to PROD'
           copy: false
           inputResources:
-            - name: promoted_react_to_qa_build_info
+            - name: promoted_react_to_qa_build_info1
           outputResources:
-            - name: promoted_react_to_prod_build_info
+            - name: promoted_react_to_prod_build_info1
