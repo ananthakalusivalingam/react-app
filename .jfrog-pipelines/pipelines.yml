@@ -63,7 +63,7 @@ pipelines:
           repositoryName: dashboard-npm-virtual        # required, npm repository name on artifactory
           autoPublishBuildInfo: true       # optional
           forceXrayScan: true              # optional
-          failOnScan: false                 # default true
+          failOnScan: true                 # default true
           integrations:
             - name: ananthaArtifactory            # required
           inputSteps:
